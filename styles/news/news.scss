@@ -207,41 +207,48 @@ h1.news__single__title {
     font-size: 40px;
     line-height: 50px;
 }
+
 h2.news__single__title {
     font-size: 34px;
     line-height: 44px;
 }
+
 h3.news__single__title {
     font-size: 30px;
     line-height: 40px;
 }
+
 h4.news__single__title {
     font-size: 26px;
     line-height: 36px; 
 }
+
 h5.news__single__title {
     font-size: 22px;
     line-height: 32px;
 }
+
 h6.news__single__title {
     font-size: 18px;
     line-height: 28px;
-}
-
-@media (min-width: 1201px) and (max-width: 1700px) {
-   
 }
 
 @media (min-width: 993px) and (max-width: 1200px) {
     
 }
 
-@media (min-width: 769px) and (max-width: 992px) {
-    
-}
-
-@media (min-width: 577px) and (max-width: 768px) {
-    
+@media (min-width: 577px) and (max-width: 992px) {
+    .news {
+        &__single {
+            &__links {
+                max-width: 100%;
+                margin: 30px auto 40px;
+            }
+            &__right-block {
+                margin-bottom: 40px;
+            }
+        }
+    }
 }
 
 @media (min-width: 320px) and (max-width: 576px) {
@@ -375,6 +382,38 @@ h6.news__single__title {
     }
 }
 
+@media (min-width: 1401px) and (max-width: 1700px) {
+    .pagination-list {
+        &__item {
+            width: 400px;
+        }
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .pagination-list {
+        &__item {
+            width: 350px;
+        }
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .pagination-list {
+        &__item {
+            width: 420px;
+        }
+    }
+}
+@media (min-width: 577px) and (max-width: 992px) {
+    .pagination-list {
+        &__item {
+            width: 750px;
+        }
+    }
+}
+
+
 .card-stock {
     position: relative;
     &__img {
@@ -392,8 +431,29 @@ h6.news__single__title {
         bottom: 25px;
         left: 25px;
         position: absolute;
+        &-title, &-subtitle {
+            color: $white;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+        }
+        &-title {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 30px;
+        }
+        &-subtitle {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 20px;
+        }
         &-date {
-            
+            color: $yellow;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 18px;
         }
     }
 }
